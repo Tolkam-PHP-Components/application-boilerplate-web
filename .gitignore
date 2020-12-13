@@ -5,16 +5,12 @@
 # environment files
 .env
 *.env
-!*.env.dist
 
 # Keep some hiddens
 !.htaccess
 !/.gitignore
 !/.travis.yml
-
-# NPM
-**/node_modules/*
-!**/node_modules/.gitkeep
+!/.env.dist
 
 # Composer
 vendor/*
