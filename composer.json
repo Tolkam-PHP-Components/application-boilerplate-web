@@ -42,6 +42,9 @@
         "tolkam/dump": "^1.0@dev"
     },
     "scripts": {
+        "post-install-cmd": [
+            "mv .env.dist .env"
+        ],
         "post-update-cmd": [
             "rm -rf var/production/cache"
         ],

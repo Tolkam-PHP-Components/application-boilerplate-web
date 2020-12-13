@@ -5,6 +5,7 @@
 # environment files
 .env
 *.env
+!*.env.dist
 
 # Keep some hiddens
 !.htaccess
