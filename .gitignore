@@ -1,0 +1,29 @@
+# Ignore IDE/hidden/OS cache files
+.*
+*~
+
+# environment files
+.env
+*.env
+
+# Keep some hiddens
+!.htaccess
+!/.gitignore
+!/.travis.yml
+
+# NPM
+**/node_modules/*
+!**/node_modules/.gitkeep
+
+# Composer
+vendor/*
+!vendor/.gitkeep
+
+# temporary files
+/var/*
+
+# external templates
+/resources/templates/*
+
+# storage
+/storage

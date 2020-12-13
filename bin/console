@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
+use Tolkam\Application\Cli\CliApplication;
+
+/**
+ * CLI App
+ */
+require_once dirname(__DIR__) . '/bootstrap.php';
+
+// build container
+$container = $containerBuilder->build();
+
+/** @var CliApplication $app */
+if ($container->has('cli.commands')) {
+    $app->setCommandLoader(
+        new ContainerCommandLoader($container, $container->get('cli.commands'))
+    );
+}
+
+$app->setCatchExceptions(true);
+$app->run();

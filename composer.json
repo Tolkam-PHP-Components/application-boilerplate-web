@@ -1,0 +1,53 @@
+{
+    "name": "tolkam/application-web",
+    "description": "Web application boilerplate",
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": false,
+        "classmap-authoritative": false
+    },
+    "autoload": {
+        "psr-4": {
+            "Acme\\App\\Web\\": [
+                "",
+                "app"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "vlucas/phpdotenv": "^4.1",
+        "php-di/php-di": "^6.0",
+        "laminas/laminas-diactoros": "^2.2",
+        "tolkam/throwable-handler": "^1.0@dev",
+        "tolkam/application": "^1.0@dev",
+        "tolkam/configuration": "^1.0@dev",
+        "tolkam/routing": "^1.0@dev",
+        "tolkam/routing-invokable-handler": "^1.0@dev",
+        "tolkam/permissions": "^1.0@dev",
+        "tolkam/template": "^1.0@dev",
+        "tolkam/asset": "^1.0@dev",
+        "tolkam/asset-twig": "^1.0@dev",
+        "tolkam/uri-generator": "^1.0@dev",
+        "tolkam/utils": "^1.0@dev",
+        "tolkam/cookie": "^1.0@dev",
+        "tolkam/translator": "^1.0@dev"
+    },
+    "require-dev": {
+        "tolkam/dump": "^1.0@dev"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "rm -rf var/production/cache"
+        ],
+        "smar-update": [
+            "git pull origin master",
+            "composer update tolkam/*"
+        ]
+    }
+}
