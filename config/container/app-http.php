@@ -5,10 +5,10 @@ use Psr\Container\ContainerInterface;
 use Tolkam\Application\ApplicationInterface;
 use Tolkam\Application\Http\Emitter\SapiEmitter;
 use Tolkam\Routing\Resolver\ContainerResolver;
-use Tolkam\Routing\Resolver\Handler\CallableResolver;
+use Tolkam\Routing\Resolver\CallableResolver;
 use Tolkam\Routing\RouterContainer;
 use Tolkam\Routing\RoutingMiddleware;
-use Tolkam\Routing\Runner\Handler\InvokableRunner;
+use Tolkam\Routing\Runner\InvokableRunner;
 use function DI\create;
 
 return [

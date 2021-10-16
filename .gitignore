@@ -2,25 +2,14 @@
 .*
 *~
 
-# environment files
-.env
-*.env
-
 # Keep some hiddens
 !.htaccess
-!/.gitignore
-!/.travis.yml
-!/.env.dist
+!.gitignore
+!.gitkeep
+!.gitlab-ci.yml
+
+# Environment configuration
+!.env.dist
 
 # Composer
 vendor/*
-!vendor/.gitkeep
-
-# temporary files
-/var/*
-
-# external templates
-/resources/templates/*
-
-# storage
-/storage

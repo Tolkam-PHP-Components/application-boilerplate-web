@@ -70,7 +70,7 @@ $app->registerDirectories([
     'public' => '@root/public',
 ]);
 
-$app->createDirectories(['config', 'cache', 'log']);
+$app->createDirectories(['cache', 'resources', 'var']);
 
 // create di container
 $containerBuilder = new ContainerBuilder;

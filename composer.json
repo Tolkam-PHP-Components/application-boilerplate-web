@@ -3,11 +3,16 @@
     "description": "Web application boilerplate",
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Kanstantsin Kulesh",
+            "email": "kk@tolkam.com",
+            "homepage": "https://www.tolkam.com"
+        }
+    ],
     "config": {
-        "optimize-autoloader": false,
-        "classmap-authoritative": false
+        "optimize-autoloader": true,
+        "classmap-authoritative": true
     },
     "autoload": {
         "psr-4": {
@@ -18,28 +23,28 @@
         }
     },
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.0",
         "ext-json": "*",
         "ext-pdo": "*",
         "vlucas/phpdotenv": "^4.1",
         "php-di/php-di": "^6.0",
         "laminas/laminas-diactoros": "^2.2",
-        "tolkam/throwable-handler": "^1.0@dev",
-        "tolkam/application": "^1.0@dev",
-        "tolkam/configuration": "^1.0@dev",
-        "tolkam/routing": "^1.0@dev",
-        "tolkam/routing-invokable-handler": "^1.0@dev",
-        "tolkam/permissions": "^1.0@dev",
-        "tolkam/template": "^1.0@dev",
-        "tolkam/asset": "^1.0@dev",
-        "tolkam/asset-twig": "^1.0@dev",
-        "tolkam/uri-generator": "^1.0@dev",
-        "tolkam/utils": "^1.0@dev",
-        "tolkam/cookie": "^1.0@dev",
-        "tolkam/translator": "^1.0@dev"
+        "tolkam/throwable-handler": "^1.0",
+        "tolkam/application": "^1.0",
+        "tolkam/configuration": "^1.0",
+        "tolkam/routing": "^1.0",
+        "tolkam/routing-invokable-runner": "^1.0",
+        "tolkam/permissions": "^1.0",
+        "tolkam/template": "^1.0",
+        "tolkam/asset": "^1.0",
+        "tolkam/asset-twig": "^1.0",
+        "tolkam/uri-generator": "^1.0",
+        "tolkam/utils": "^1.0",
+        "tolkam/cookie": "^1.0",
+        "tolkam/translator": "^1.0"
     },
     "require-dev": {
-        "tolkam/dump": "^1.0@dev"
+        "tolkam/dump": "^2.0"
     },
     "scripts": {
         "post-install-cmd": [
@@ -48,7 +53,7 @@
         "post-update-cmd": [
             "rm -rf var/production/cache"
         ],
-        "smar-update": [
+        "app-update": [
             "git pull origin master",
             "composer update tolkam/*"
         ]

@@ -18,7 +18,12 @@ return function (Map $map, ContainerInterface $container) {
         
         $body = <<<BODY
             <h1>Welcome to Tolkam application!</h1>
-            Configuration value of 'foo' is: $fooValue
+            <p>Configuration values:</p>
+            <ul>
+                <li><b>debug</b>: {$configuration->get('debug')}
+                <li><b>runtime.isLocal</b>: {$configuration->get('runtime.isLocal')}
+                <li><b>foo</b>: {$configuration->get('foo')}
+            </ul>
         BODY;
         
         $response->getBody()->write($body);

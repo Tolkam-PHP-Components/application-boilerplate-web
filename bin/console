@@ -1,12 +1,14 @@
 #!/usr/bin/env php
 <?php declare(strict_types=1);
 
+use DI\ContainerBuilder;
 use Symfony\Component\Console\CommandLoader\ContainerCommandLoader;
 use Tolkam\Application\Cli\CliApplication;
 
 /**
  * CLI App
  */
+/* @var ContainerBuilder $containerBuilder */
 require_once dirname(__DIR__) . '/bootstrap.php';
 
 // build container
